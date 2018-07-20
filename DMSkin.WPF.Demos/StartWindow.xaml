@@ -310,6 +310,7 @@
                         <GroupBox Header="无边框窗口">
                             <StackPanel Margin="15">
                                 <TextBlock Text="窗体阴影大小 正常值 0 - 25~30" />
+                                
                                 <Slider
                                     Margin="5"
                                     LargeChange="1"
