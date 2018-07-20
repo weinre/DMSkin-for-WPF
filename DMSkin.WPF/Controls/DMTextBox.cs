@@ -19,7 +19,7 @@ namespace DMSkin.WPF.Controls
             set { SetValue(CornerRadiusProperty, value); }
         }
         public static readonly DependencyProperty CornerRadiusProperty =
-            DependencyProperty.Register("CornerRadius", typeof(CornerRadius), typeof(DMTextBox), new PropertyMetadata(null));
+            DependencyProperty.Register("CornerRadius", typeof(CornerRadius), typeof(DMTextBox), new PropertyMetadata(new CornerRadius(2)));
         public Geometry Icon
         {
             get { return (Geometry)GetValue(IconProperty); }
@@ -78,5 +78,16 @@ namespace DMSkin.WPF.Controls
         //}
         //public static readonly DependencyProperty ShowShadowProperty =
         //    DependencyProperty.Register("ShowShadow", typeof(bool), typeof(DMTextBox), new PropertyMetadata(false));
+
+        public SolidColorBrush SelectedColor
+        {
+            get { return (SolidColorBrush)GetValue(SelectedColorProperty); }
+            set { SetValue(SelectedColorProperty, value); }
+        }
+        public static readonly DependencyProperty SelectedColorProperty =
+            DependencyProperty.Register("SelectedColor", typeof(SolidColorBrush), typeof(DMTextBox), new PropertyMetadata(new SolidColorBrush(Color.FromArgb(255, 124, 125, 133))));
+
+
+
     }
 }

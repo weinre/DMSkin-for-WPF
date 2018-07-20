@@ -27,7 +27,7 @@
                         Background="{TemplateBinding Control.Background}"
                         BorderBrush="{TemplateBinding Control.BorderBrush}"
                         BorderThickness="{TemplateBinding Control.BorderThickness}"
-                        SnapsToDevicePixels="True">
+                        UseLayoutRounding="True">
                         <ScrollViewer Name="DG_ScrollViewer" Focusable="False">
                             <ScrollViewer.Template>
                                 <ControlTemplate TargetType="ScrollViewer">
@@ -225,7 +225,7 @@
 
 
     <!--<Style TargetType="DataGridColumnHeader">
-        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="UseLayoutRounding" Value="True" />
         <Setter Property="MinWidth" Value="0" />
         <Setter Property="MinHeight" Value="30" />
         <Setter Property="Foreground" Value="#FF5A5A5A" />
@@ -266,7 +266,7 @@
         <Style.Resources>
             <ResourceDictionary />
         </Style.Resources>
-        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="UseLayoutRounding" Value="True" />
         <Setter Property="MinWidth" Value="0" />
         <Setter Property="MinHeight" Value="30" />
         <Setter Property="Foreground" Value="#FF5A5A5A" />
@@ -282,7 +282,7 @@
                 <ControlTemplate TargetType="DataGridColumnHeader">
                     <Grid>
                         <!--<Border IsHovered="{TemplateBinding UIElement.IsMouseOver}" IsPressed="{TemplateBinding ButtonBase.IsPressed}" IsClickable="{TemplateBinding DataGridColumnHeader.CanUserSort}" SortDirection="{TemplateBinding DataGridColumnHeader.SortDirection}" SeparatorBrush="{TemplateBinding DataGridColumnHeader.SeparatorBrush}" SeparatorVisibility="{TemplateBinding DataGridColumnHeader.SeparatorVisibility}" BorderThickness="{TemplateBinding Border.BorderThickness}" Padding="{TemplateBinding Control.Padding}" BorderBrush="{TemplateBinding Border.BorderBrush}" Background="{TemplateBinding Panel.Background}">
-                            <ContentPresenter RecognizesAccessKey="True" Content="{TemplateBinding ContentControl.Content}" ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}" ContentStringFormat="{TemplateBinding ContentControl.ContentStringFormat}" HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}" SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}" />
+                            <ContentPresenter RecognizesAccessKey="True" Content="{TemplateBinding ContentControl.Content}" ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}" ContentStringFormat="{TemplateBinding ContentControl.ContentStringFormat}" HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}" UseLayoutRounding="{TemplateBinding UIElement.UseLayoutRounding}" />
                         </Border>-->
                         <Border
                             x:Name="BackgroundBorder"

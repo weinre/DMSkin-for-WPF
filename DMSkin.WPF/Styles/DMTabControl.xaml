@@ -1,6 +1,7 @@
 ﻿<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="clr-namespace:DMSkin.WPF.Controls"
     xmlns:s="clr-namespace:System;assembly=mscorlib">
 
     <Style x:Key="DMTopTabControl" TargetType="TabControl">
@@ -48,7 +49,7 @@
                     <Grid
                         ClipToBounds="True"
                         KeyboardNavigation.TabNavigation="Local"
-                        SnapsToDevicePixels="True">
+                        UseLayoutRounding="True">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Name="ColumnDefinition0" />
                             <ColumnDefinition Name="ColumnDefinition1" Width="0" />
@@ -233,14 +234,15 @@
             </Setter.Value>
         </Setter>
     </Style>
-    <Style x:Key="DMTopTabItemLeft" TargetType="TabItem">
+
+    <Style TargetType="{x:Type controls:DMTabItem}">
         <Setter Property="Width" Value="110" />
         <Setter Property="FontSize" Value="12" />
         <Setter Property="Height" Value="28" />
         <Setter Property="Foreground" Value="#FF888888" />
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type TabItem}">
+                <ControlTemplate TargetType="{x:Type controls:DMTabItem}">
                     <Grid Background="Transparent">
                         <Border
                             x:Name="x"
@@ -259,95 +261,18 @@
                         <Trigger Property="IsMouseOver" Value="true">
                             <Setter TargetName="x" Property="Background" Value="#FFF5F5F7" />
                         </Trigger>
-                        <Trigger Property="IsSelected" Value="true">
-                            <Setter TargetName="x" Property="BorderThickness" Value="0" />
-                            <Setter TargetName="Content" Property="Foreground" Value="#FFE5E5E7" />
-                            <Setter TargetName="x" Property="Background" Value="#FF7C7D85" />
+                        <Trigger Property="TabItemType" Value="Right">
+                            <Setter TargetName="x" Property="BorderThickness" Value="1" />
+                            <Setter TargetName="x" Property="CornerRadius" Value="0,5,5,0" />
                         </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-        <Setter Property="ContentTemplate">
-            <Setter.Value>
-                <DataTemplate>
-                    <ContentPresenter Margin="0" Content="{TemplateBinding Content}" />
-                </DataTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-    <Style x:Key="DMTopTabItemRight" TargetType="TabItem">
-        <Setter Property="Width" Value="110" />
-        <Setter Property="FontSize" Value="12" />
-        <Setter Property="Height" Value="28" />
-        <Setter Property="Foreground" Value="#FF888888" />
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type TabItem}">
-                    <Grid Background="Transparent">
-                        <Border
-                            x:Name="x"
-                            BorderBrush="#FFE5E5E5"
-                            BorderThickness="1,1,1,1"
-                            CornerRadius="0,5,5,0">
-                            <TextBlock
-                                x:Name="Content"
-                                Margin="5,0,0,0"
-                                HorizontalAlignment="Center"
-                                VerticalAlignment="Center"
-                                Text="{TemplateBinding Header}" />
-                        </Border>
-                    </Grid>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="true">
-                            <Setter TargetName="x" Property="Background" Value="#FFF5F5F7" />
+                        <Trigger Property="TabItemType" Value="Middle">
+                            <Setter TargetName="x" Property="BorderThickness" Value="1,1,0,1" />
+                            <Setter TargetName="x" Property="CornerRadius" Value="0" />
                         </Trigger>
                         <Trigger Property="IsSelected" Value="true">
-                            <Setter TargetName="Content" Property="Foreground" Value="#FFE5E5E7" />
-                            <Setter TargetName="x" Property="Background" Value="#FF7C7D85" />
                             <Setter TargetName="x" Property="BorderThickness" Value="0" />
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-        <Setter Property="ContentTemplate">
-            <Setter.Value>
-                <DataTemplate>
-                    <ContentPresenter Margin="0" Content="{TemplateBinding Content}" />
-                </DataTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-    <Style x:Key="DMTopTabItem" TargetType="TabItem">
-        <Setter Property="Width" Value="110" />
-        <Setter Property="FontSize" Value="12" />
-        <Setter Property="Height" Value="28" />
-        <Setter Property="Foreground" Value="#FF888888" />
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type TabItem}">
-                    <Grid Background="Transparent">
-                        <Border
-                            x:Name="x"
-                            BorderBrush="#FFE5E5E5"
-                            BorderThickness="1,1,0,1">
-                            <TextBlock
-                                x:Name="Content"
-                                Margin="5,0,0,0"
-                                HorizontalAlignment="Center"
-                                VerticalAlignment="Center"
-                                Text="{TemplateBinding Header}" />
-                        </Border>
-                    </Grid>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="true">
-                            <Setter TargetName="x" Property="Background" Value="#FFF5F5F7" />
-                        </Trigger>
-                        <Trigger Property="IsSelected" Value="true">
-                            <Setter TargetName="Content" Property="Foreground" Value="#FFE5E5E7" />
-                            <Setter TargetName="x" Property="Background" Value="#FF7C7D85" />
-                            <Setter TargetName="x" Property="BorderThickness" Value="0" />
+                            <Setter TargetName="Content" Property="Foreground" Value="{Binding SelectForeground, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+                            <Setter TargetName="x" Property="Background" Value="{Binding SelectedColor, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

@@ -3,6 +3,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:controls="clr-namespace:DMSkin.WPF.Controls">
     <Style TargetType="{x:Type controls:DMCheckBox}">
+        <Setter Property="BorderBrush" Value="#DCDFE6" />
         <Setter Property="Cursor" Value="Hand" />
         <Setter Property="Template">
             <Setter.Value>
@@ -10,33 +11,48 @@
                     <Grid
                         x:Name="grid"
                         Background="{StaticResource TransparentColor}"
-                        SnapsToDevicePixels="True">
+                        UseLayoutRounding="True">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto" />
                             <ColumnDefinition />
                         </Grid.ColumnDefinitions>
                         <Border
-                            Width="15"
-                            Height="15"
-                            Margin="0,0,5,0"
+                            x:Name="border"
+                            Width="14"
+                            Height="14"
+                            Margin="0,0,3,0"
                             Padding="{TemplateBinding Padding}"
                             BorderBrush="{TemplateBinding BorderBrush}"
-                            BorderThickness="1">
-                            <Rectangle
+                            BorderThickness="1"
+                            CornerRadius="2">
+                            <Path
                                 x:Name="icon"
-                                Margin="1"
-                                Fill="{TemplateBinding IconColor}"
+                                Width="10"
+                                Height="8"
+                                Data="{StaticResource Icon_Check}"
+                                Fill="White"
                                 Stretch="Fill"
                                 Visibility="Collapsed" />
                         </Border>
-                        <ContentPresenter VerticalAlignment="Center" Grid.Column="1" />
+                        <Label
+                            x:Name="content"
+                            Grid.Column="1"
+                            VerticalAlignment="Center"
+                            Content="{TemplateBinding Content}"
+                            Foreground="{TemplateBinding Foreground}" />
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="border" Property="BorderThickness" Value="0" />
+                            <Setter TargetName="border" Property="Background" Value="{Binding IconColor, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+                            <Setter TargetName="content" Property="Foreground" Value="{Binding IconColor, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
                             <Setter TargetName="icon" Property="Visibility" Value="Visible" />
                         </Trigger>
                         <Trigger Property="IsPressed" Value="True">
                             <Setter TargetName="grid" Property="Opacity" Value="0.8" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" Value="0.5" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

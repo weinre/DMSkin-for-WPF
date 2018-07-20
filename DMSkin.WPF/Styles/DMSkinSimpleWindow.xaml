@@ -25,7 +25,7 @@
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"
-                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
+                        UseLayoutRounding="{TemplateBinding UseLayoutRounding}">
                         <ContentPresenter />
                     </Border>
                 </ControlTemplate>

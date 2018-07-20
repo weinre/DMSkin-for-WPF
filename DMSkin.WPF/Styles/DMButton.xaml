@@ -19,7 +19,7 @@
                                 Height="{TemplateBinding IconHeight}"
                                 Data="{TemplateBinding Icon}"
                                 Fill="{Binding DMSystemButtonForeground, RelativeSource={RelativeSource TemplatedParent}}"
-                                SnapsToDevicePixels="True"
+                                UseLayoutRounding="True"
                                 Stretch="Fill" />
                         </Label>
                     </Grid>
@@ -53,7 +53,7 @@
                                 Height="3"
                                 Data="F1M0,6L0,9 9,9 9,6 0,6z"
                                 Fill="{Binding DMSystemButtonForeground, RelativeSource={RelativeSource TemplatedParent}}"
-                                SnapsToDevicePixels="True"
+                                UseLayoutRounding="True"
                                 Stretch="Fill" />
                         </Label>
                     </Grid>
@@ -88,7 +88,7 @@
                                 Height="12"
                                 Data="F1M0,0L0,9 9,9 9,0 0,0 0,3 8,3 8,8 1,8 1,3z"
                                 Fill="{Binding DMSystemButtonForeground, RelativeSource={RelativeSource TemplatedParent}}"
-                                SnapsToDevicePixels="True"
+                                UseLayoutRounding="True"
                                 Stretch="Fill" />
                         </Label>
                     </Grid>
@@ -125,7 +125,7 @@
                                 Height="12"
                                 Data="m12.65194,6.64088l-2.65193,2.65194l-2.65195,-2.65194c-0.19527,-0.19528 -0.51189,-0.19528 -0.70718,0c-0.19529,0.19528 -0.19528,0.5119 0,0.70718l2.65194,2.65195l-2.65194,2.65193c-0.19528,0.19528 -0.19528,0.51191 0,0.70719c0.19528,0.19528 0.5119,0.19528 0.70718,0l2.65195,-2.65194l2.65193,2.65194c0.19528,0.19528 0.5119,0.19528 0.70719,0c0.19528,-0.19528 0.19528,-0.51191 0,-0.70719l-2.65194,-2.65193l2.65194,-2.65195c0.19528,-0.19527 0.19528,-0.51189 0,-0.70718c-0.19528,-0.19528 -0.5119,-0.19528 -0.70719,0z"
                                 Fill="{Binding DMSystemButtonForeground, RelativeSource={RelativeSource TemplatedParent}}"
-                                SnapsToDevicePixels="True"
+                                UseLayoutRounding="True"
                                 Stretch="Fill" />
                         </Label>
                     </Grid>
@@ -163,7 +163,7 @@
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"
                         CornerRadius="{TemplateBinding CornerRadius}"
-                        SnapsToDevicePixels="True">
+                        UseLayoutRounding="True">
                         <ContentPresenter
                             x:Name="contentPresenter"
                             Margin="{TemplateBinding Padding}"
@@ -174,7 +174,7 @@
                             ContentTemplate="{TemplateBinding ContentTemplate}"
                             Focusable="False"
                             RecognizesAccessKey="True"
-                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                            UseLayoutRounding="{TemplateBinding UseLayoutRounding}" />
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsDefaulted" Value="True">
@@ -192,10 +192,7 @@
                             <Setter TargetName="contentPresenter" Property="Opacity" Value="0.8" />
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="False">
-                            <Setter TargetName="border" Property="BorderThickness" Value="1" />
-                            <Setter TargetName="border" Property="BorderBrush" Value="#FFe6e6e6" />
-                            <Setter TargetName="border" Property="Background" Value="#FFFBFBFB" />
-                            <Setter Property="Foreground" Value="#FFC9C9C9" />
+                            <Setter Property="Opacity" Value="0.5" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

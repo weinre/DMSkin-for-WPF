@@ -48,6 +48,7 @@
     <Compile Include="API\HTTP.cs" />
     <Compile Include="API\Native.cs" />
     <Compile Include="API\ViewModelBase.cs" />
+    <Compile Include="Controls\DMNumericBox.cs" />
     <Compile Include="Controls\DMRadioButton.cs" />
     <Compile Include="Controls\DMCheckBox.cs" />
     <Compile Include="Controls\DMLinkButton.cs" />
@@ -56,6 +57,7 @@
     <Compile Include="Controls\DMSystemCloseButton.cs" />
     <Compile Include="Controls\DMSystemButton.cs" />
     <Compile Include="Controls\DMSystemMinButton.cs" />
+    <Compile Include="Controls\DMTabItem.cs" />
     <Compile Include="Controls\DMTextBox.cs" />
     <Compile Include="Controls\ElasticWrapPanel.cs" />
     <Compile Include="Converters\BoolToVisibilityConverter.cs" />
