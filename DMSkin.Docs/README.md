@@ -141,7 +141,6 @@ DMWindowShadowBackColor="#FF323CAD"   // 阴影背景色 (只对双层方案有�
 ## 效果预览
 
 <img src="https://gitee.com/DreamMachine/Image/raw/master/Preview1.jpg" width="600" height="400" align="center">
-<img src="https://gitee.com/DreamMachine/Image/raw/master/GIF3.gif" width="600" height="400" align="center">
 <img src="https://gitee.com/DreamMachine/Image/raw/master/Preview2.png" width="600" height="400" align="center">
 
 ## 联系
