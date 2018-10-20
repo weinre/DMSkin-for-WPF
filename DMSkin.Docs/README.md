@@ -45,7 +45,44 @@ DFW为窗体无边框提供了两种方案：
 ## 用法 & 配置
 #### 1. 创建一个WPF项目
 #### 2. [添加 DMSkin.WPF.dll 引用](https://www.jb51.net/softjc/466183.html)
-#### 3. 修改 `MainWindow.cs`
+#### 3. 添加 App.xaml Resources
+````xml
+<Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!--  样式分离 不用的可以不引用 减少内存暂用  -->
+                <!--  DMSKin内置转换器 配色  -->
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;Component/Styles/DMSkin.xaml" />
+                <!--  DMSKin内置滚动容器  -->
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;Component/Styles/DMScrollViewer.xaml" />
+                <!--  DMSKin内置SVG图标  -->
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMIcon.xaml" />
+                <!--  DMSKin内置按钮  -->
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMButton.xaml" />
+                <!--  DMSKin内置选择框  -->
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMCheckBox.xaml" />
+                <!--  DMSKin内置动画  -->
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;Component/Styles/Animation.xaml" />
+                <!--  DMSKin内置输入框  -->
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMTextBox.xaml" />
+                <!--  DMSKin内置滑动  -->
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMSlider.xaml" />
+                <!--  DMSKin提示框  -->
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMToolTip.xaml" />
+                <!--  DMSKin右键菜单  -->
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMContextMenu.xaml" />
+                <!--  DMSKin其他样式  -->
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMTabControl.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMRadioButton.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMTreeView.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMDataGrid.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMListBox.xaml" />
+                <!--  最后加载项目其他的样式  -->
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+````
+#### 4. 修改 `MainWindow.cs`
 这里以引入单层方案 `DMSkinSimpleWindow` 为例，使用双层方案将`DMSkinSimpleWindow`改成`DMComplexWindow`即可。
 ````csharp
 + using DMSkin.WPF;
@@ -64,7 +101,7 @@ DFW为窗体无边框提供了两种方案：
   }
 ````
 
-#### 4. 修改 `MainWindow.xaml`
+#### 5. 修改 `MainWindow.xaml`
 ````xml
 - <Window x:Class="DMSkinTest.MainWindow" 
 + <DMSkin:DMSkinSimpleWindow
@@ -82,7 +119,7 @@ DFW为窗体无边框提供了两种方案：
 + </DMSkin:DMSkinSimpleWindow>
 ````
 若想使用双层方案，需要将上方的`DMSkinSimpleWindow`改成`DMComplexWindow`。
-#### 5. 添加系统按钮 (可选)
+#### 6. 添加系统按钮 (可选)
 ````xml
 <!-- 将下面的代码添加进 MainWindow.xaml -->
 <!-- 系统按钮属性:
@@ -106,7 +143,7 @@ DFW为窗体无边框提供了两种方案：
 </WrapPanel>
 ````
 
-#### 6. 配置你的 DFW 窗体属性 (可选)
+#### 7. 配置你的 DFW 窗体属性 (可选)
 ````js
 DMWindowShadowSize="10"               // 窗体阴影大小
 DMWindowShadowColor="#FFC8C8C8"       // 窗体阴影颜色
@@ -116,7 +153,7 @@ DMWindowShadowVisibility="False"      // 是否显示窗体阴影
 DMWindowShadowBackColor="#FF323CAD"   // 阴影背景色 (只对双层方案有效)
 ````
 
-#### 7.制作圆角窗体 (可选)
+#### 8.制作圆角窗体 (可选)
 ````xml
 <Border Background="White" CornerRadius="5"  BorderThickness="1">
         <Border.Effect>
