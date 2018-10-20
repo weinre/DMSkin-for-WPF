@@ -49,7 +49,7 @@ There are some other ways to fetch `DMSkin.WPF.dll` and source code.
 ## Usage & Configration
 #### 1. Create a new WPF project
 #### 2. [Add DMSkin.WPF.dll reference](http://p40kjburh.bkt.clouddn.com/18-6-13/50043356.jpg)
-#### 3. Add
+#### 3. Add App.xaml Resources
 ````xml
 <Application.Resources>
         <ResourceDictionary>
@@ -86,7 +86,7 @@ There are some other ways to fetch `DMSkin.WPF.dll` and source code.
         </ResourceDictionary>
     </Application.Resources>
 ````
-#### 3. Modify `MainWindow.cs`
+#### 4. Modify `MainWindow.cs`
 Here we set `DMSkinSimpleWindow` as an example, if you want to apply `DMSkinComplexWindow` plan, please replace `DMSkinSimpleWindow` to `DMSkinComplexWindow` in the following code.
 ````csharp
 + using DMSkin.WPF;
@@ -105,7 +105,7 @@ Here we set `DMSkinSimpleWindow` as an example, if you want to apply `DMSkinComp
   }
 ````
 
-#### 4. Modify `MainWindow.xaml`
+#### 5. Modify `MainWindow.xaml`
 ````xml
 - <Window x:Class="DMSkinTest.MainWindow"
 + <DMSkin:DMSkinSimpleWindow
@@ -123,7 +123,7 @@ Here we set `DMSkinSimpleWindow` as an example, if you want to apply `DMSkinComp
 + </DMSkin:DMSkinSimpleWindow>
 ````
 As the same, if you want to apply `DMSkinComplexWindow` plan, please replace `DMSkinSimpleWindow` to `DMSkinComplexWindow` in the above code.
-#### 5. Add System Buttons (optional)
+#### 6. Add System Buttons (optional)
 ````xml
 <!-- Add below codes into MainWindow.xaml -->
 <!-- System button properties:
@@ -147,7 +147,7 @@ As the same, if you want to apply `DMSkinComplexWindow` plan, please replace `DM
 </WrapPanel>
 ````
 
-#### 6. Config your DFW properties (optional)
+#### 7. Config your DFW properties (optional)
 ````js
 DMWindowShadowSize="10"               // window shadow size
 DMWindowShadowColor="#FFC8C8C8"       // window shadow color
@@ -157,7 +157,7 @@ DMWindowShadowVisibility="False"      // whether show window shadow
 DMWindowShadowBackColor="#FF323CAD"   // shadow background color (only for DMSkinComplexWindow)
 ````
 
-#### 7. Make Rounded window (optional)
+#### 8. Make Rounded window (optional)
 ````xml
 <Border Background="White" CornerRadius="5"  BorderThickness="1">
         <Border.Effect>
