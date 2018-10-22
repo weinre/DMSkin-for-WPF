@@ -3,7 +3,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:controls="clr-namespace:DMSkin.WPF.Controls">
     <Style TargetType="{x:Type controls:DMCheckBox}">
-        <Setter Property="BorderBrush" Value="#DCDFE6" />
+        <Setter Property="BorderBrush" Value="#99DCDFE6" />
         <Setter Property="Cursor" Value="Hand" />
         <Setter Property="Template">
             <Setter.Value>

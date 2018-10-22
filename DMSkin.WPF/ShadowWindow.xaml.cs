@@ -17,9 +17,9 @@ namespace DMSkin.WPF
         }
         #endregion
 
-        private int _DMWindowShadowSize = 10;
+        private double _DMWindowShadowSize = 10.0;
         [Description("窗体阴影大小"), Category("DMSkin")]
-        public int DMWindowShadowSize
+        public double DMWindowShadowSize
         {
             get
             {

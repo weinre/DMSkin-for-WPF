@@ -19,8 +19,8 @@
                                 Height="{TemplateBinding IconHeight}"
                                 Data="{TemplateBinding Icon}"
                                 Fill="{Binding DMSystemButtonForeground, RelativeSource={RelativeSource TemplatedParent}}"
-                                UseLayoutRounding="True"
-                                Stretch="Fill" />
+                                Stretch="Fill"
+                                UseLayoutRounding="True" />
                         </Label>
                     </Grid>
                     <ControlTemplate.Triggers>
@@ -53,8 +53,8 @@
                                 Height="3"
                                 Data="F1M0,6L0,9 9,9 9,6 0,6z"
                                 Fill="{Binding DMSystemButtonForeground, RelativeSource={RelativeSource TemplatedParent}}"
-                                UseLayoutRounding="True"
-                                Stretch="Fill" />
+                                Stretch="Fill"
+                                UseLayoutRounding="True" />
                         </Label>
                     </Grid>
                     <ControlTemplate.Triggers>
@@ -88,8 +88,8 @@
                                 Height="12"
                                 Data="F1M0,0L0,9 9,9 9,0 0,0 0,3 8,3 8,8 1,8 1,3z"
                                 Fill="{Binding DMSystemButtonForeground, RelativeSource={RelativeSource TemplatedParent}}"
-                                UseLayoutRounding="True"
-                                Stretch="Fill" />
+                                Stretch="Fill"
+                                UseLayoutRounding="True" />
                         </Label>
                     </Grid>
                     <ControlTemplate.Triggers>
@@ -125,8 +125,8 @@
                                 Height="12"
                                 Data="m12.65194,6.64088l-2.65193,2.65194l-2.65195,-2.65194c-0.19527,-0.19528 -0.51189,-0.19528 -0.70718,0c-0.19529,0.19528 -0.19528,0.5119 0,0.70718l2.65194,2.65195l-2.65194,2.65193c-0.19528,0.19528 -0.19528,0.51191 0,0.70719c0.19528,0.19528 0.5119,0.19528 0.70718,0l2.65195,-2.65194l2.65193,2.65194c0.19528,0.19528 0.5119,0.19528 0.70719,0c0.19528,-0.19528 0.19528,-0.51191 0,-0.70719l-2.65194,-2.65193l2.65194,-2.65195c0.19528,-0.19527 0.19528,-0.51189 0,-0.70718c-0.19528,-0.19528 -0.5119,-0.19528 -0.70719,0z"
                                 Fill="{Binding DMSystemButtonForeground, RelativeSource={RelativeSource TemplatedParent}}"
-                                UseLayoutRounding="True"
-                                Stretch="Fill" />
+                                Stretch="Fill"
+                                UseLayoutRounding="True" />
                         </Label>
                     </Grid>
                     <ControlTemplate.Triggers>
