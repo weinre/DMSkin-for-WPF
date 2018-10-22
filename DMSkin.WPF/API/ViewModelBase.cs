@@ -28,7 +28,23 @@ namespace DMSkin
                 isLoad = value;
                 OnPropertyChanged("IsLoad");
             }
-        } 
+        }
         #endregion
+
+        private bool update;
+
+        /// <summary>
+        /// 刷新
+        /// </summary>
+        public bool Update
+        {
+            get { return update; }
+            set
+            {
+                update = value;
+                OnPropertyChanged("Update");
+            }
+        }
+
     }
 }
