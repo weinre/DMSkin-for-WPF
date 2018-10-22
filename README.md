@@ -49,7 +49,44 @@ There are some other ways to fetch `DMSkin.WPF.dll` and source code.
 ## Usage & Configration
 #### 1. Create a new WPF project
 #### 2. [Add DMSkin.WPF.dll reference](http://p40kjburh.bkt.clouddn.com/18-6-13/50043356.jpg)
-#### 3. Modify `MainWindow.cs`
+#### 3. Add App.xaml Resources
+````xml
+<Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!--  样式分离 不用的可以不引用 减少内存暂用  -->
+                <!--  DMSKin内置转换器 配色  -->
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;Component/Styles/DMSkin.xaml" />
+                <!--  DMSKin内置滚动容器  -->
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;Component/Styles/DMScrollViewer.xaml" />
+                <!--  DMSKin内置SVG图标  -->
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMIcon.xaml" />
+                <!--  DMSKin内置按钮  -->
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMButton.xaml" />
+                <!--  DMSKin内置选择框  -->
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMCheckBox.xaml" />
+                <!--  DMSKin内置动画  -->
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;Component/Styles/Animation.xaml" />
+                <!--  DMSKin内置输入框  -->
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMTextBox.xaml" />
+                <!--  DMSKin内置滑动  -->
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMSlider.xaml" />
+                <!--  DMSKin提示框  -->
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMToolTip.xaml" />
+                <!--  DMSKin右键菜单  -->
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMContextMenu.xaml" />
+                <!--  DMSKin其他样式  -->
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMTabControl.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMRadioButton.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMTreeView.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMDataGrid.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMListBox.xaml" />
+                <!--  最后加载项目其他的样式  -->
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+````
+#### 4. Modify `MainWindow.cs`
 Here we set `DMSkinSimpleWindow` as an example, if you want to apply `DMSkinComplexWindow` plan, please replace `DMSkinSimpleWindow` to `DMSkinComplexWindow` in the following code.
 ````csharp
 + using DMSkin.WPF;
@@ -68,7 +105,7 @@ Here we set `DMSkinSimpleWindow` as an example, if you want to apply `DMSkinComp
   }
 ````
 
-#### 4. Modify `MainWindow.xaml`
+#### 5. Modify `MainWindow.xaml`
 ````xml
 - <Window x:Class="DMSkinTest.MainWindow"
 + <DMSkin:DMSkinSimpleWindow
@@ -86,7 +123,7 @@ Here we set `DMSkinSimpleWindow` as an example, if you want to apply `DMSkinComp
 + </DMSkin:DMSkinSimpleWindow>
 ````
 As the same, if you want to apply `DMSkinComplexWindow` plan, please replace `DMSkinSimpleWindow` to `DMSkinComplexWindow` in the above code.
-#### 5. Add System Buttons (optional)
+#### 6. Add System Buttons (optional)
 ````xml
 <!-- Add below codes into MainWindow.xaml -->
 <!-- System button properties:
@@ -110,7 +147,7 @@ As the same, if you want to apply `DMSkinComplexWindow` plan, please replace `DM
 </WrapPanel>
 ````
 
-#### 6. Config your DFW properties (optional)
+#### 7. Config your DFW properties (optional)
 ````js
 DMWindowShadowSize="10"               // window shadow size
 DMWindowShadowColor="#FFC8C8C8"       // window shadow color
@@ -120,7 +157,7 @@ DMWindowShadowVisibility="False"      // whether show window shadow
 DMWindowShadowBackColor="#FF323CAD"   // shadow background color (only for DMSkinComplexWindow)
 ````
 
-#### 7. Make Rounded window (optional)
+#### 8. Make Rounded window (optional)
 ````xml
 <Border Background="White" CornerRadius="5"  BorderThickness="1">
         <Border.Effect>
@@ -145,7 +182,6 @@ DMWindowShadowBackColor="#FF323CAD"   // shadow background color (only for DMSki
 ## Preview
 
 <img src="https://gitee.com/DreamMachine/Image/raw/master/Preview1.jpg" width="600" height="400" align="center">
-<img src="https://gitee.com/DreamMachine/Image/raw/master/GIF3.gif" width="600" height="400" align="center">
 <img src="https://gitee.com/DreamMachine/Image/raw/master/Preview2.png" width="600" height="400" align="center">
 
 ## Communication
