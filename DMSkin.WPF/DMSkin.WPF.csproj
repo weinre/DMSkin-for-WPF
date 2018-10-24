@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="API\DelegateCommand.cs" />
+    <Compile Include="API\DesktopAPI.cs" />
     <Compile Include="API\Execute.cs" />
     <Compile Include="API\HTTP.cs" />
     <Compile Include="API\Native.cs" />

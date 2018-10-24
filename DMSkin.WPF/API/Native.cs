@@ -454,6 +454,16 @@ namespace DMSkin
         WS_CHILDWINDOW = (WS_CHILD)
     }
 
+    [Flags]
+    public enum SendMessageTimeoutFlags : uint
+    {
+        SMTO_NORMAL = 0x0,
+        SMTO_BLOCK = 0x1,
+        SMTO_ABORTIFHUNG = 0x2,
+        SMTO_NOTIMEOUTIFNOTHUNG = 0x8,
+        SMTO_ERRORONEXIT = 0x20
+    }
+
     [StructLayout(LayoutKind.Sequential)]
     public struct NativeMessage
     {
@@ -522,6 +532,18 @@ namespace DMSkin
             return result;
         }
 
+    
+        [DllImport("user32.dll")]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        public static extern bool EnumWindows(EnumWindowsProc lpEnumFunc, IntPtr lParam);
+
+        public delegate bool EnumWindowsProc(IntPtr hwnd, IntPtr lParam);
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        public static extern int ShowWindow(IntPtr hwnd, int nCmdShow);
+
+        [DllImport("user32.dll", SetLastError = true)]
+        public static extern IntPtr SetParent(IntPtr hWndChild, IntPtr hWndNewParent);
 
         [DllImport("gdi32.dll")]
         internal static extern IntPtr CreatePolygonRgn(ref POINTAPI lpPoint, int nCount, int nPolyFillMode);
@@ -547,6 +569,9 @@ namespace DMSkin
 
         [DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hwnd, int msg, int wparam, int lparam);
+
+        [DllImport("user32.dll", SetLastError = true, CharSet = CharSet.Auto)]
+        public static extern IntPtr SendMessageTimeout(IntPtr hWnd, uint Msg, UIntPtr wParam, IntPtr lParam, SendMessageTimeoutFlags fuFlags, uint uTimeout, out UIntPtr lpdwResult);
 
         [DllImport("user32.dll")]
         public static extern int PostMessage(IntPtr hwnd, int msg, int wparam, int lparam);
@@ -592,8 +617,11 @@ namespace DMSkin
         [DllImport("user32.dll")]
         public static extern int GetSystemMetrics(int smIndex);
 
-        [DllImport("user32.dll", SetLastError = true,CharSet =CharSet.Unicode)]
-        public static extern IntPtr FindWindowEx(IntPtr parentHandle, IntPtr childAfter, string className, string windowTitle);
+        [DllImport("user32.dll", SetLastError = true)]
+        public static extern IntPtr FindWindow(string lpClassName, string lpWindowName);
+
+        [DllImport("user32.dll", SetLastError = true, CharSet = CharSet.Unicode)]
+        public static extern IntPtr FindWindowEx(IntPtr parentHandle, IntPtr childAfter, string className, IntPtr windowTitle);
 
         [DllImport("shell32.dll")]
         internal static extern int SHAppBarMessage(uint dwMessage, [In] ref APPBARDATA pData);
