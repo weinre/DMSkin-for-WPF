@@ -194,7 +194,7 @@ DMWindowShadowBackColor="#FF323CAD"   // 阴影背景色 (只对双层方案有�
 ## 捐赠
 如果你觉得这个框架真的对你很有帮助，欢迎给我捐赠，这将鼓励我做的更好!
 
-<img src="http://p40kjburh.bkt.clouddn.com/18-6-13/9034578.jpg" width="500">
+<img src="http://dmskin.com/pay.jpg" width="500">
 
 ## 更新日志
 ### 2.5.0 (2018-06-07)
