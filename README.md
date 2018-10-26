@@ -200,7 +200,7 @@ If you can not communicate with us in Chinese.You can communicate with us by giv
 ## Donation
 If this framework really helps you a lot, you can donate me to support my work, which can encourage me to do better.
 
-<img src="http://p40kjburh.bkt.clouddn.com/18-6-13/9034578.jpg" width="500">
+<img src="http://dmskin.com/pay.jpg" width="500">
 
 ## Change Log
 ### 2.5.0 (2018-06-07)
