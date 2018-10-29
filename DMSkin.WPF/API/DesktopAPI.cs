@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 
 namespace DMSkin.WPF.API
@@ -20,6 +21,7 @@ namespace DMSkin.WPF.API
             IntPtr progman = NativeMethods.FindWindow("Progman", null);
             NativeMethods.SendMessageTimeout(progman, (uint)0x052C, new UIntPtr(0), IntPtr.Zero, SendMessageTimeoutFlags.SMTO_NORMAL, 1000, out UIntPtr result);
             NativeMethods.SetParent(Handle, FindWorkerWPtr());
+            
         }
 
 
@@ -46,6 +48,17 @@ namespace DMSkin.WPF.API
             }, IntPtr.Zero);
 
             return intPtr;
+        }
+
+        public static void FullScreen(IntPtr targeHandler)
+        {
+            var hMonitor = NativeMethods.MonitorFromWindow(targeHandler, NativeConstants.MONITOR_DEFAULTTONEAREST);
+            MONITORINFO info = new MONITORINFO();
+            bool ok = NativeMethods.GetMonitorInfo(hMonitor, info);
+            if (!ok)
+                return;
+
+            ok = NativeMethods.SetWindowPos(targeHandler, IntPtr.Zero, info.rcMonitor.left, info.rcMonitor.top, info.rcMonitor.right, info.rcMonitor.bottom, 0);
         }
     }
 }
