@@ -12,7 +12,7 @@
     <SolidColorBrush x:Key="TransparentBlackColor" Color="#00000000" />
 
     <!--  线条颜色  -->
-    <SolidColorBrush x:Key="LineColor">#44C8C8C8</SolidColorBrush>
+    <SolidColorBrush x:Key="LineColor">#22777777</SolidColorBrush>
 
     <!--  主题色  -->
     <SolidColorBrush x:Key="MainColor">#FF88DD33</SolidColorBrush>

@@ -21,7 +21,7 @@
                             Width="14"
                             Height="14"
                             Padding="{TemplateBinding Padding}"
-                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderBrush="{TemplateBinding Foreground}"
                             BorderThickness="1"
                             CornerRadius="2">
                             <Path
