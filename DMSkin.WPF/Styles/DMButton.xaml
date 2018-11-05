@@ -230,6 +230,7 @@
                             <Setter TargetName="grid" Property="Opacity" Value="0.8" />
                         </Trigger>
                         <Trigger Property="DMDisplayLine" Value="false">
+                            <Setter TargetName="Content" Property="Margin" Value="0" />
                             <Setter TargetName="line" Property="Visibility" Value="Collapsed" />
                         </Trigger>
                     </ControlTemplate.Triggers>
