@@ -51,7 +51,7 @@
                     HorizontalAlignment="Left"
                     VerticalAlignment="Center"
                     FontSize="20"
-                    Text="DMSkin for WPF Demo" />
+                    Text="DMSkin for WPF Demo 2.5.1.0" />
                 <WrapPanel
                     Height="{Binding DMSystemButtonSize}"
                     HorizontalAlignment="Right"
