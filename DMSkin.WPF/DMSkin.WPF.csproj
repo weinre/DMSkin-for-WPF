@@ -90,6 +90,7 @@
     <Compile Include="Controls\DMTextBox.cs" />
     <Compile Include="Controls\ElasticWrapPanel.cs" />
     <Compile Include="Converters\BoolToVisibilityConverter.cs" />
+    <Compile Include="Converters\TimeSpanToStringConverter.cs" />
     <Compile Include="DMSkinComplexWindow.cs" />
     <Compile Include="DMSkinSimpleWindow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
