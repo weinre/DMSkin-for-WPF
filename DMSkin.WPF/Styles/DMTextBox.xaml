@@ -47,10 +47,10 @@
                             <TextBlock
                                 x:Name="watermark"
                                 Grid.Column="1"
-                                Margin="3,0,0,0.5"
+                                Margin="3,0,0,2"
                                 VerticalAlignment="Center"
                                 FontSize="{TemplateBinding FontSize}"
-                                Foreground="#FF888888"
+                                Foreground="{TemplateBinding HintColor}"
                                 IsHitTestVisible="False"
                                 Text="{TemplateBinding Hint}"
                                 Visibility="Collapsed" />

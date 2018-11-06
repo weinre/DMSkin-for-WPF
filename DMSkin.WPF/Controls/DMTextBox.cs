@@ -89,5 +89,15 @@ namespace DMSkin.WPF.Controls
 
 
 
+
+        public SolidColorBrush HintColor
+        {
+            get { return (SolidColorBrush)GetValue(HintColorProperty); }
+            set { SetValue(HintColorProperty, value); }
+        }
+        public static readonly DependencyProperty HintColorProperty =
+            DependencyProperty.Register("HintColor", typeof(SolidColorBrush), typeof(DMTextBox), new PropertyMetadata(new SolidColorBrush(Color.FromArgb(255, 88, 88, 88))));
+
+
     }
 }

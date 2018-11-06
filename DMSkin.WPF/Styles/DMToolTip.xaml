@@ -1,9 +1,6 @@
-﻿<ResourceDictionary
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:controls="clr-namespace:DMSkin.WPF.Controls">
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <!--  个性提示框  -->
-    <Style x:Name="ToolTipBox" TargetType="ToolTip">
+    <Style x:Key="ToolTipBox" TargetType="ToolTip">
         <Setter Property="Foreground" Value="White" />
         <Setter Property="Placement" Value="Center" />
         <Setter Property="VerticalOffset" Value="-30" />

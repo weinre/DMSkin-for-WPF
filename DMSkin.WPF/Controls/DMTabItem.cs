@@ -11,6 +11,9 @@ namespace DMSkin.WPF.Controls
     public class DMTabItem : TabItem
     {
 
+        /// <summary>
+        /// 选中背景色
+        /// </summary>
         public SolidColorBrush SelectedColor
         {
             get { return (SolidColorBrush)GetValue(SelectedColorProperty); }
@@ -19,14 +22,31 @@ namespace DMSkin.WPF.Controls
         public static readonly DependencyProperty SelectedColorProperty =
             DependencyProperty.Register("SelectedColor", typeof(SolidColorBrush), typeof(DMTabItem), new PropertyMetadata(new SolidColorBrush(Color.FromArgb(255, 124, 125, 133))));
 
-
-        public SolidColorBrush SelectForeground
+        /// <summary>
+        /// 选中文字颜色
+        /// </summary>
+        public SolidColorBrush SelectedForeground
         {
-            get { return (SolidColorBrush)GetValue(SelectForegroundProperty); }
-            set { SetValue(SelectForegroundProperty, value); }
+            get { return (SolidColorBrush)GetValue(SelectedForegroundProperty); }
+            set { SetValue(SelectedForegroundProperty, value); }
         }
-        public static readonly DependencyProperty SelectForegroundProperty =
-            DependencyProperty.Register("SelectForeground", typeof(SolidColorBrush), typeof(DMTabItem), new PropertyMetadata(new SolidColorBrush(Color.FromArgb(255, 229, 229, 231))));
+        public static readonly DependencyProperty SelectedForegroundProperty =
+            DependencyProperty.Register("SelectedForeground", typeof(SolidColorBrush), typeof(DMTabItem), new PropertyMetadata(new SolidColorBrush(Color.FromArgb(255, 229, 229, 231))));
+
+
+        /// <summary>
+        /// 鼠标悬浮背景色
+        /// </summary>
+        public SolidColorBrush HoverColor
+        {
+            get { return (SolidColorBrush)GetValue(HoverColorProperty); }
+            set { SetValue(HoverColorProperty, value); }
+        }
+
+        public static readonly DependencyProperty HoverColorProperty =
+            DependencyProperty.Register("HoverColor", typeof(SolidColorBrush), typeof(DMTabItem), new PropertyMetadata(new SolidColorBrush(Color.FromArgb(255, 220, 220, 220))));
+
+
 
 
         public TabItemType TabItemType
