@@ -4,6 +4,7 @@
     xmlns:controls="clr-namespace:DMSkin.WPF.Controls">
 
     <!--#region 系统按钮-->
+    <!--#region 系统其他按钮(用于自定义按钮)-->
     <Style TargetType="{x:Type controls:DMSystemButton}">
         <Setter Property="Template">
             <Setter.Value>
@@ -35,7 +36,9 @@
             </Setter.Value>
         </Setter>
     </Style>
+    <!--#endregion-->
 
+    <!--#region 系统最小化按钮-->
     <Style TargetType="{x:Type controls:DMSystemMinButton}">
         <Setter Property="Template">
             <Setter.Value>
@@ -67,7 +70,9 @@
             </Setter.Value>
         </Setter>
     </Style>
+    <!--#endregion-->
 
+    <!--#region 系统最大化按钮-->
     <Style TargetType="{x:Type controls:DMSystemMaxButton}">
         <Setter Property="Template">
             <Setter.Value>
@@ -103,7 +108,9 @@
             </Setter.Value>
         </Setter>
     </Style>
+    <!--#endregion-->
 
+    <!--#region 系统关闭按钮-->
     <Style TargetType="{x:Type controls:DMSystemCloseButton}">
         <Setter Property="Template">
             <Setter.Value>
@@ -135,6 +142,8 @@
             </Setter.Value>
         </Setter>
     </Style>
+    <!--#endregion-->
+
     <!--#endregion-->
 
     <!--#region  一般按钮-->
@@ -232,4 +241,5 @@
         </Setter>
     </Style>
     <!--#endregion-->
+
 </ResourceDictionary>

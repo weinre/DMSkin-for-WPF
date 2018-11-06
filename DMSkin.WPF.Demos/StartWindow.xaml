@@ -51,7 +51,7 @@
                     HorizontalAlignment="Left"
                     VerticalAlignment="Center"
                     FontSize="20"
-                    Text="DMSkin for WPF 官方案例" />
+                    Text="DMSkin for WPF Demo" />
                 <WrapPanel
                     Height="{Binding DMSystemButtonSize}"
                     HorizontalAlignment="Right"
@@ -102,8 +102,8 @@
                 <controls:DMTabItem
                     Height="35"
                     Header="基础组件"
-                    SelectForeground="White"
                     SelectedColor="#2BB669"
+                    SelectedForeground="White"
                     TabItemType="Left">
                     <StackPanel Margin="10" Orientation="Horizontal">
                         <GroupBox Header="输入框">
@@ -143,7 +143,10 @@
                                     Hint="透明水印输入框" />
 
                                 <controls:DMNumericBox Width="130" />
-                                <controls:DMNumericBox Width="130" Margin="0,10,0,0" Foreground="#FF1E9FFF"/>
+                                <controls:DMNumericBox
+                                    Width="130"
+                                    Margin="0,10,0,0"
+                                    Foreground="#FF1E9FFF" />
                             </StackPanel>
                         </GroupBox>
                         <GroupBox Header="按钮">
@@ -310,7 +313,7 @@
                         <GroupBox Header="无边框窗口">
                             <StackPanel Margin="15">
                                 <TextBlock Text="窗体阴影大小 正常值 0 - 25~30" />
-                                
+
                                 <Slider
                                     Margin="5"
                                     LargeChange="1"
@@ -394,8 +397,8 @@
                 <controls:DMTabItem
                     Height="35"
                     Header="WPF教程"
-                    SelectForeground="White"
                     SelectedColor="#FF1E9FFF"
+                    SelectedForeground="White"
                     TabItemType="Middle">
                     <StackPanel Margin="30">
                         <controls:DMLinkButton
@@ -437,26 +440,21 @@
                 <controls:DMTabItem
                     Height="35"
                     Header="WPF样式与模版"
-                    SelectForeground="White"
-                    SelectedColor="#FFFF8E1E" />
+                    SelectedColor="#FFFF8E1E"
+                    SelectedForeground="White" />
                 <controls:DMTabItem Height="35" Header="WPF动画">
                     <Frame NavigationUIVisibility="Hidden" Source="/DMSkin.WPF.Demos;component/Views/PageAnimation.xaml" />
                 </controls:DMTabItem>
                 <controls:DMTabItem
                     Height="35"
                     Header="关于DMSkin"
-                    SelectForeground="White"
                     SelectedColor="#FF1E9FFF"
+                    SelectedForeground="White"
                     TabItemType="Right">
                     <Frame NavigationUIVisibility="Hidden" Source="/DMSkin.WPF.Demos;component/Views/PageAbout.xaml" />
                 </controls:DMTabItem>
             </TabControl>
         </Grid>
-        <ResizeGrip
-            HorizontalAlignment="Right"
-            VerticalAlignment="Bottom"
-            HorizontalContentAlignment="Stretch"
-            VerticalContentAlignment="Stretch"
-            Visibility="{Binding DMVisibility}" />
+        <ResizeGrip Style="{StaticResource WyyResizeGrip}" />
     </Grid>
 </DMSkin:DMSkinSimpleWindow>

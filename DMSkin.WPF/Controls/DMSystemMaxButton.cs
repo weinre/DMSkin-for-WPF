@@ -38,7 +38,6 @@ namespace DMSkin.WPF.Controls
             };
         }
 
-
         public bool IsMax
 {
             get { return (bool)GetValue(IsMaxProperty); }

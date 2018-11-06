@@ -47,8 +47,6 @@ namespace DMSkin.WPF.Controls
         public static readonly DependencyProperty IconWidthProperty =
             DependencyProperty.Register("IconWidth", typeof(double), typeof(DMTextBox), new PropertyMetadata(15.0));
 
-
-
         /// <summary>
         /// 图标高度
         /// </summary>
@@ -60,25 +58,6 @@ namespace DMSkin.WPF.Controls
         public static readonly DependencyProperty IconHeightProperty =
             DependencyProperty.Register("IconHeight", typeof(double), typeof(DMTextBox), new PropertyMetadata(15.0));
 
-
-        //public double ShadowBlurRadius
-        //{
-        //    get { return (double)GetValue(ShadowBlurRadiusProperty); }
-        //    set { SetValue(ShadowBlurRadiusProperty, value); }
-        //}
-        //public static readonly DependencyProperty ShadowBlurRadiusProperty =
-        //    DependencyProperty.Register("ShadowBlurRadius", typeof(double), typeof(DMTextBox), new PropertyMetadata(0.0));
-        ///// <summary>
-        ///// 是否显示阴影
-        ///// </summary>
-        //public bool ShowShadow
-        //{
-        //    get { return (bool)GetValue(ShowShadowProperty); }
-        //    set { SetValue(ShowShadowProperty, value); }
-        //}
-        //public static readonly DependencyProperty ShowShadowProperty =
-        //    DependencyProperty.Register("ShowShadow", typeof(bool), typeof(DMTextBox), new PropertyMetadata(false));
-
         public SolidColorBrush SelectedColor
         {
             get { return (SolidColorBrush)GetValue(SelectedColorProperty); }
@@ -87,9 +66,9 @@ namespace DMSkin.WPF.Controls
         public static readonly DependencyProperty SelectedColorProperty =
             DependencyProperty.Register("SelectedColor", typeof(SolidColorBrush), typeof(DMTextBox), new PropertyMetadata(new SolidColorBrush(Color.FromArgb(255, 124, 125, 133))));
 
-
-
-
+        /// <summary>
+        /// 水印颜色
+        /// </summary>
         public SolidColorBrush HintColor
         {
             get { return (SolidColorBrush)GetValue(HintColorProperty); }
@@ -97,7 +76,5 @@ namespace DMSkin.WPF.Controls
         }
         public static readonly DependencyProperty HintColorProperty =
             DependencyProperty.Register("HintColor", typeof(SolidColorBrush), typeof(DMTextBox), new PropertyMetadata(new SolidColorBrush(Color.FromArgb(255, 88, 88, 88))));
-
-
     }
 }

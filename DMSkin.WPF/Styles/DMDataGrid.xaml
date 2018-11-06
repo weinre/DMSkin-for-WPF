@@ -297,7 +297,6 @@
                                     Margin="5,0,0,0"
                                     HorizontalAlignment="Left"
                                     VerticalAlignment="Center" />
-
                                 <Path
                                     x:Name="SortArrow"
                                     Grid.Column="2"

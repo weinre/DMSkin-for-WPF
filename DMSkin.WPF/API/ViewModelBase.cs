@@ -13,7 +13,6 @@ namespace DMSkin
         }
         #endregion
 
-
         #region 是否正在加载
         private bool isLoad;
 
@@ -31,8 +30,8 @@ namespace DMSkin
         }
         #endregion
 
+        #region 是否需要刷新
         private bool update;
-
         /// <summary>
         /// 刷新
         /// </summary>
@@ -44,7 +43,7 @@ namespace DMSkin
                 update = value;
                 OnPropertyChanged("Update");
             }
-        }
-
+        } 
+        #endregion
     }
 }

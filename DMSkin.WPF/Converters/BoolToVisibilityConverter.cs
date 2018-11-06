@@ -5,8 +5,15 @@ using System.Windows.Data;
 
 namespace DMSkin.WPF.Converters
 {
+    /// <summary>
+    /// Bool 转换 为 Visibility
+    /// </summary>
     public class BoolToVisibilityConverter : IValueConverter
     {
+        /// <summary>
+        /// 转换函数
+        /// </summary>
+        /// <param name="parameter">只要有值就会被反转 - 相当于取反</param>
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             if (value is bool b && b)
@@ -18,6 +25,7 @@ namespace DMSkin.WPF.Converters
 
         public object ConvertFun(Visibility visibility, object parameter)
         {
+            //有command参数 取反值
             if (parameter is string p)//取反值
             {
                 if (visibility == Visibility.Visible)
