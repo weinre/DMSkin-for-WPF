@@ -1,7 +1,7 @@
 # DMSkin-for-WPF
 
 ![](https://img.shields.io/badge/.NET-%3E%3D3.5-brightgreen.svg)
-![](https://img.shields.io/badge/version-2.5.0.9-blue.svg)
+![](https://img.shields.io/badge/version-2.5.1.0-blue.svg)
 ![](https://img.shields.io/badge/license-MIT-green.svg)
 
 #### 一个强大的WPF无边框窗体框架和控件库组合。
@@ -77,6 +77,8 @@ DFW为窗体无边框提供了两种方案：
                 <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMTreeView.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMDataGrid.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMListBox.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMResizeGrip.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMImage.xaml" />
                 <!--  最后加载项目其他的样式  -->
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
@@ -197,6 +199,10 @@ DMWindowShadowBackColor="#FF323CAD"   // 阴影背景色 (只对双层方案有�
 <img src="http://dmskin.com/pay.jpg" width="500">
 
 ## 更新日志
+### 2.5.1.0 (2018-11-06)
+1.优化代码（当前版本号）
+2.新增网易云Resizegrip
+
 ### 2.5.0 (2018-06-07)
 1. 将2个项目合二为一。
 

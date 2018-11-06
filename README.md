@@ -1,7 +1,7 @@
 # DMSkin-for-WPF
 
 ![](https://img.shields.io/badge/.NET-%3E%3D3.5-brightgreen.svg)
-![](https://img.shields.io/badge/version-2.5.0.9-blue.svg)
+![](https://img.shields.io/badge/version-2.5.1.0-blue.svg)
 ![](https://img.shields.io/badge/license-MIT-green.svg)
 
 #### A powerful *WPF borderless window framework* and *control library* utility.
@@ -81,6 +81,8 @@ There are some other ways to fetch `DMSkin.WPF.dll` and source code.
                 <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMTreeView.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMDataGrid.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMListBox.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMResizeGrip.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/DMSkin.WPF;component/Styles/DMImage.xaml" />
                 <!--  最后加载项目其他的样式  -->
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
@@ -203,6 +205,9 @@ If this framework really helps you a lot, you can donate me to support my work, 
 <img src="http://dmskin.com/pay.jpg" width="500">
 
 ## Change Log
+### 2.5.0 (2018-06-07)
+1. Add WangYiYun Resizegrip.
+
 ### 2.5.0 (2018-06-07)
 1. Merge DMSkinComplexWindow and DMSkinSimpleWindow project
 2. Add some common calss for WPF, for example ViewModelBase, UI Scheduler, Converter and so on.
