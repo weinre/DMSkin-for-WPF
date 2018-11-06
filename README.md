@@ -1,7 +1,7 @@
 # DMSkin-for-WPF
 
 ![](https://img.shields.io/badge/.NET-%3E%3D3.5-brightgreen.svg)
-![](https://img.shields.io/badge/version-2.5.0.9-blue.svg)
+![](https://img.shields.io/badge/version-2.5.1.0-blue.svg)
 ![](https://img.shields.io/badge/license-MIT-green.svg)
 
 #### A powerful *WPF borderless window framework* and *control library* utility.
