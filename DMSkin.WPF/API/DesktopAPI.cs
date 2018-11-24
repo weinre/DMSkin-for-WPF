@@ -21,10 +21,11 @@ namespace DMSkin.WPF.API
             IntPtr progman = NativeMethods.FindWindow("Progman", null);
             NativeMethods.SendMessageTimeout(progman, (uint)0x052C, new UIntPtr(0), IntPtr.Zero, SendMessageTimeoutFlags.SMTO_NORMAL, 1000, out UIntPtr result);
             NativeMethods.SetParent(Handle, FindWorkerWPtr());
-            
         }
 
-
+        /// <summary>
+        /// 查找工作区域
+        /// </summary>
         public static IntPtr FindWorkerWPtr()
         {
             IntPtr workerw = IntPtr.Zero;

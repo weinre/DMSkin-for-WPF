@@ -231,6 +231,9 @@
                         <Trigger Property="IsPressed" Value="True">
                             <Setter TargetName="grid" Property="Opacity" Value="0.8" />
                         </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="grid" Property="Opacity" Value="0.3" />
+                        </Trigger>
                         <Trigger Property="DMDisplayLine" Value="false">
                             <Setter TargetName="Content" Property="Margin" Value="0" />
                             <Setter TargetName="line" Property="Visibility" Value="Collapsed" />

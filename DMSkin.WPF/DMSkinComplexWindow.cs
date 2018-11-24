@@ -172,7 +172,7 @@ namespace DMSkin.WPF
                 IntPtr hRgn = NativeMethods.CreatePolygonRgn(ref poin[0], 4, 0);
                 NativeMethods.SetWindowRgn(Handle, hRgn, true);
                 ReWindowState = false;
-                //Debug.WriteLine("触发时间:" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff"));
+                //("触发时间:" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff"));
             });
         }
 
@@ -386,7 +386,7 @@ namespace DMSkin.WPF
                         shadowWindowState = false;
                         //激活当前窗口
                         Activate();
-                        //Debug.Write(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff"));
+                        //(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff"));
                     }));
                 });
             }

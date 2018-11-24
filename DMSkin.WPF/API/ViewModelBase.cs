@@ -25,7 +25,7 @@ namespace DMSkin
             set
             {
                 isLoad = value;
-                OnPropertyChanged("IsLoad");
+                OnPropertyChanged(nameof(IsLoad));
             }
         }
         #endregion
@@ -41,7 +41,7 @@ namespace DMSkin
             set
             {
                 update = value;
-                OnPropertyChanged("Update");
+                OnPropertyChanged(nameof(Update));
             }
         } 
         #endregion
