@@ -13,7 +13,7 @@ DMSkin-for-WPF (简称 DFW) 是一个强大的WPF无边框窗体框架和控件�
 
 ## 支持的 **`.NET Framework 3.5`** 到 **`.NET Framework 3.5 4.7`**，并支持从Windows XP到Window 10的所有系统版本。
 
-## 如果你的软件仅仅考虑兼容 Windows10 + ，.NET Framework 4.5+,可以考虑使用官网方案:[WindowChrome](https://github.com/944095635/WindowChrome-Demo),当然.NET Framework 3.5也是有办法实现的，但是这些库在Windows7 上面不会产生阴影。
+## 如果你的软件仅仅考虑兼容 Windows10 + ，.NET Framework 4.5+,可以考虑使用官网方案:[WindowChrome](https://github.com/944095635/WindowChrome-Demo),但是这些库在Windows7 上面不会产生阴影。（.NET Framework 3.5 可以使用System.Windows.Shell实现）
 
 DFW为窗体无边框提供了两种方案：
 #### 1. 双层方案
