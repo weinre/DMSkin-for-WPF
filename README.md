@@ -1,7 +1,7 @@
 # DMSkin-for-WPF
 
 ![](https://img.shields.io/badge/.NET-%3E%3D3.5-brightgreen.svg)
-![](https://img.shields.io/badge/version-2.5.1.0-blue.svg)
+![](https://img.shields.io/badge/version-2.5.1.1-blue.svg)
 ![](https://img.shields.io/badge/license-MIT-green.svg)
 
 #### A powerful *WPF borderless window framework* and *control library* utility.
@@ -9,6 +9,13 @@
 [中文说明请点这里](./DMSkin.Docs/)
 
 <img src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/DMSkin.ScreenShot/demo.png" align="center">
+
+| Name                |   Describe    |
+| :----:              |   :----:      |
+| DMSkin.Core | Core  |
+| DMSkin.WPF  | Window |
+| DMSkin.WPF.AntDesign  |  AntDesign |
+| DMSkin.WPF.Demos  |  Demo    |
 
 ## Preface 
 DMSkin-for-WPF (aka DFW) is a powerful WPF borderless window framework and control library utility. It supports window border shadow, window transition animation, contains lots of elegant controls. It aimed to let developers create beautiful WPF window more efficient and faster.
