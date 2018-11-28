@@ -15,6 +15,8 @@ DMSkin-for-WPF (aka DFW) is a powerful WPF borderless window framework and contr
 
 ## Supports **`.NET Framework 3.5`** to **`.NET Framework 4.7`**, and runs well from Windows XP to Windows 10.
 
+## If your application is only running on Windows 10, .NET Framework 4.5 or later, you can simply apply Microsoft official solution: [WindowChrome](https://github.com/944095635/WindowChrome-Demo) instead.But this solution cannot generate border shadow on Windows 7 as expected.(For .NET 3.5, you can use System.Window.Shell to achieve the same function)
+
 DFW offers 2 plans for window borderless:
 #### 1. ComplexWindow Plan
 Use Windows 32 API to redraw non-client area and create a separate shadow window for shadow's presentation.
