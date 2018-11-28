@@ -1,4 +1,5 @@
-﻿using DMSkin.WPF.API;
+﻿using DMSkin.Core.Common;
+using DMSkin.Core.MVVM;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;

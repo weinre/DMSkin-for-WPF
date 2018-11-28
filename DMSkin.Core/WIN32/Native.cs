@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
 
-namespace DMSkin
+namespace DMSkin.Core.WIN32
 {
     public enum HitTest : int
     {
@@ -307,7 +304,7 @@ namespace DMSkin
         WM_NCMOUSEMOVE = 0x00A0,
         WM_NCLBUTTONDOWN = 0x00A1,
         WM_NCLBUTTONUP = 0x00A2,
-       
+
         WM_NCLBUTTONDBLCLK = 0x00A3,
         WM_NCRBUTTONDOWN = 0x00A4,
         WM_NCRBUTTONUP = 0x00A5,
@@ -439,8 +436,8 @@ namespace DMSkin
 
     public struct POINTAPI
     {
-        internal int x;
-        internal int y;
+        public int x;
+        public int y;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -616,7 +613,7 @@ namespace DMSkin
             return result;
         }
 
-    
+
         [DllImport("user32.dll")]
         [return: MarshalAs(UnmanagedType.Bool)]
         public static extern bool EnumWindows(EnumWindowsProc lpEnumFunc, IntPtr lParam);
@@ -630,7 +627,7 @@ namespace DMSkin
         public static extern IntPtr SetParent(IntPtr hWndChild, IntPtr hWndNewParent);
 
         [DllImport("gdi32.dll")]
-        internal static extern IntPtr CreatePolygonRgn(ref POINTAPI lpPoint, int nCount, int nPolyFillMode);
+        public static extern IntPtr CreatePolygonRgn(ref POINTAPI lpPoint, int nCount, int nPolyFillMode);
 
         [DllImport("user32.dll")]
         public static extern IntPtr MonitorFromWindow(IntPtr hwnd, int dwFlags);
@@ -712,10 +709,10 @@ namespace DMSkin
         public static extern IntPtr FindWindowEx(IntPtr parentHandle, IntPtr childAfter, string className, IntPtr windowTitle);
 
         [DllImport("shell32.dll")]
-        internal static extern int SHAppBarMessage(uint dwMessage, [In] ref APPBARDATA pData);
+        public static extern int SHAppBarMessage(uint dwMessage, [In] ref APPBARDATA pData);
 
         [DllImport("user32.dll")]
-        internal static extern bool GetMonitorInfo(HandleRef hmonitor, [In, Out] MONITORINFOEX monitorInfo);
+        public static extern bool GetMonitorInfo(HandleRef hmonitor, [In, Out] MONITORINFOEX monitorInfo);
 
         [DllImport("user32.dll")]
         public static extern bool GetMonitorInfo(IntPtr hmonitor, [In, Out] MONITORINFO monitorInfo);
@@ -726,7 +723,7 @@ namespace DMSkin
         public const int SM_CXSIZEFRAME = 32;
         public const int SM_CYSIZEFRAME = 33;
         public const int SM_CXPADDEDBORDER = 92;
-        
+
         public const int GWL_ID = (-12);
         public const int GWL_STYLE = (-16);
         public const int GWL_EXSTYLE = (-20);

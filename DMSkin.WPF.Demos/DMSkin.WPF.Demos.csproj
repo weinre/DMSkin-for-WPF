@@ -103,6 +103,9 @@
     <Compile Include="Views\PageAnimation.xaml.cs">
       <DependentUpon>PageAnimation.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\PageAntDesign.xaml.cs">
+      <DependentUpon>PageAntDesign.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Window\SimpleWindow.xaml.cs">
       <DependentUpon>SimpleWindow.xaml</DependentUpon>
     </Compile>
@@ -117,6 +120,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\PageAnimation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PageAntDesign.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -164,6 +171,14 @@
     <Resource Include="Images\user.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DMSkin.Core\DMSkin.Core.csproj">
+      <Project>{13DA6558-356B-47B9-96F2-FE4D5457CB02}</Project>
+      <Name>DMSkin.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DMSkin.WPF.AntDesign\DMSkin.WPF.AntDesign.csproj">
+      <Project>{d633fda6-ddbe-46d6-a3e4-8bcc145935bf}</Project>
+      <Name>DMSkin.WPF.AntDesign</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DMSkin.WPF\DMSkin.WPF.csproj">
       <Project>{168352b1-6a0c-4c9c-8a32-68b512da3cfc}</Project>
       <Name>DMSkin.WPF</Name>

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace DMSkin
+namespace DMSkin.Core.MVVM
 {
     public class ViewModelBase : INotifyPropertyChanged
     {
@@ -43,7 +43,7 @@ namespace DMSkin
                 update = value;
                 OnPropertyChanged(nameof(Update));
             }
-        } 
+        }
         #endregion
     }
 }

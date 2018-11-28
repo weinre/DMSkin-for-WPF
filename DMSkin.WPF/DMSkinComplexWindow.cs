@@ -1,3 +1,4 @@
+using DMSkin.Core.WIN32;
 using System;
 using System.ComponentModel;
 using System.Runtime.InteropServices;

@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Text;
 using System.Windows.Data;
 
-namespace DMSkin.WPF.Converters
+namespace DMSkin.Core.Converters
 {
     /// <summary>
     /// 将TimeSpan 转换为 00:00

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 
-namespace DMSkin.WPF
+namespace DMSkin.Core.MVVM
 {
     public class DelegateCommand : ICommand
     {

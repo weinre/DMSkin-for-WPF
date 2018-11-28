@@ -8,7 +8,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace DMSkin.WPF.API
+namespace DMSkin.Core.Common
 {
     /// <summary>
     /// Http连接操作帮助类

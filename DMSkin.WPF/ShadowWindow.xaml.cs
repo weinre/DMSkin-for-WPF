@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DMSkin.Core.WIN32;
+using System;
 using System.ComponentModel;
 using System.Windows;
 using System.Windows.Interop;

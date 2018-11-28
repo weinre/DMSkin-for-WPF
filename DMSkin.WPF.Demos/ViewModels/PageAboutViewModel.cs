@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using DMSkin.Core.MVVM;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
 using System.Windows.Input;
 
 namespace DMSkin.WPF.Demos.ViewModels

@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Windows;
 using System.Windows.Data;
 
-namespace DMSkin.WPF.Converters
+namespace DMSkin.Core.Converters
 {
     /// <summary>
     /// Bool 转换 为 Visibility
