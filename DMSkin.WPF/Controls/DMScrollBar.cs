@@ -20,7 +20,7 @@ namespace DMSkin.WPF.Controls
         /// 滑块默认颜色
         /// </summary>
         public static readonly DependencyProperty ThemeColorProperty =
-            DependencyProperty.Register("ThemeColor", typeof(SolidColorBrush), typeof(DMScrollBar), new PropertyMetadata(new SolidColorBrush(Color.FromArgb(90, 88, 88, 88))));
+            DependencyProperty.Register("ThemeColor", typeof(SolidColorBrush), typeof(DMScrollBar), new PropertyMetadata(new SolidColorBrush(Color.FromArgb(255, 200, 200, 200))));
         #endregion
 
         #region 滑块悬浮颜色
@@ -33,7 +33,7 @@ namespace DMSkin.WPF.Controls
         /// 滑块悬浮颜色
         /// </summary>
         public static readonly DependencyProperty ThemeColorMouseOverProperty =
-            DependencyProperty.Register("ThemeColorMouseOver", typeof(SolidColorBrush), typeof(DMScrollBar), new PropertyMetadata(new SolidColorBrush(Color.FromArgb(120, 88, 88, 88))));
+            DependencyProperty.Register("ThemeColorMouseOver", typeof(SolidColorBrush), typeof(DMScrollBar), new PropertyMetadata(new SolidColorBrush(Color.FromArgb(255, 180, 180, 180))));
         #endregion
 
         #region 滑块悬浮按下颜色
@@ -46,7 +46,7 @@ namespace DMSkin.WPF.Controls
         /// 滑块悬浮按下颜色
         /// </summary>
         public static readonly DependencyProperty ThemeColorPressedProperty =
-            DependencyProperty.Register("ThemeColorPressed", typeof(SolidColorBrush), typeof(DMScrollBar), new PropertyMetadata(new SolidColorBrush(Color.FromArgb(100, 88, 88, 88))));
+            DependencyProperty.Register("ThemeColorPressed", typeof(SolidColorBrush), typeof(DMScrollBar), new PropertyMetadata(new SolidColorBrush(Color.FromArgb(255, 190, 190, 190))));
         #endregion
 
         #region 圆角值X
@@ -59,7 +59,7 @@ namespace DMSkin.WPF.Controls
             set { SetValue(RadiusXProperty, value); }
         }
         public static readonly DependencyProperty RadiusXProperty =
-            DependencyProperty.Register("RadiusX", typeof(double), typeof(DMScrollBar), new PropertyMetadata(0.0));
+            DependencyProperty.Register("RadiusX", typeof(double), typeof(DMScrollBar), new PropertyMetadata(2.0));
         #endregion
 
         #region 圆角值Y
@@ -72,7 +72,7 @@ namespace DMSkin.WPF.Controls
             set { SetValue(RadiusYProperty, value); }
         }
         public static readonly DependencyProperty RadiusYProperty =
-            DependencyProperty.Register("RadiusY", typeof(double), typeof(DMScrollBar), new PropertyMetadata(0.0));
+            DependencyProperty.Register("RadiusY", typeof(double), typeof(DMScrollBar), new PropertyMetadata(2.0));
         #endregion
 
         #region 滚动条大小

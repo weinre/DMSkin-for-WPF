@@ -10,10 +10,6 @@ using System.Windows.Media;
 namespace DMSkin.WPF
 {
     #region VirtualizingWrapPanel
-
-    /// <summary>
-    ///     子要素を仮想化する <see cref="System.Windows.Controls.WrapPanel" />。
-    /// </summary>
     public class VirtualizingWrapPanel : VirtualizingPanel, IScrollInfo
     {
         #region OnItemsChanged
@@ -606,10 +602,6 @@ namespace DMSkin.WPF
 
         #region ScrollOwner
 
-        /// <summary>
-        ///     スクロール動作を制御する <see cref="System.Windows.Controls.ScrollViewer" /> 要素を
-        ///     取得、または設定する。
-        /// </summary>
         public ScrollViewer ScrollOwner { get; set; }
 
         #endregion

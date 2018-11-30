@@ -127,10 +127,12 @@
 
     <!--#region 滚动列表-->
     <Style TargetType="{x:Type controls:DMScrollViewer}">
+        <Setter Property="VerticalScrollBarVisibility" Value="Auto" />
+        <Setter Property="HorizontalScrollBarVisibility" Value="Disabled" />
         <Setter Property="CanContentScroll" Value="True" />
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type ScrollViewer}">
+                <ControlTemplate TargetType="{x:Type controls:DMScrollViewer}">
                     <Grid x:Name="Grid" Background="{TemplateBinding Background}">
                         <ScrollContentPresenter
                             x:Name="PART_ScrollContentPresenter"
