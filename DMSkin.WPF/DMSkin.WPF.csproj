@@ -76,13 +76,17 @@
     <Compile Include="Controls\DMCheckBox.cs" />
     <Compile Include="Controls\DMLinkButton.cs" />
     <Compile Include="Controls\DMButton.cs" />
+    <Compile Include="Controls\DMScrollBar.cs" />
+    <Compile Include="Controls\DMScrollViewer.cs" />
     <Compile Include="Controls\DMSystemMaxButton.cs" />
     <Compile Include="Controls\DMSystemCloseButton.cs" />
     <Compile Include="Controls\DMSystemButton.cs" />
     <Compile Include="Controls\DMSystemMinButton.cs" />
     <Compile Include="Controls\DMTabItem.cs" />
     <Compile Include="Controls\DMTextBox.cs" />
+    <Compile Include="Controls\DMThumb.cs" />
     <Compile Include="Controls\ElasticWrapPanel.cs" />
+    <Compile Include="Controls\VirtualizingWrapPanel .cs" />
     <Compile Include="DMSkinComplexWindow.cs" />
     <Compile Include="DMSkinSimpleWindow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

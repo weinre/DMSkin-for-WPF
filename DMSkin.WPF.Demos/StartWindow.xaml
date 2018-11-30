@@ -52,7 +52,7 @@
                     HorizontalAlignment="Left"
                     VerticalAlignment="Center"
                     FontSize="20"
-                    Text="DMSkin for WPF Demo 2.5.1.0" />
+                    Text="DMSkin for WPF Demo 2.5.1.2" />
                 <WrapPanel
                     Height="{Binding DMSystemButtonSize}"
                     HorizontalAlignment="Right"
@@ -402,6 +402,12 @@
                     SelectedForeground="White"
                     TabItemType="Middle">
                     <views:PageAntDesign />
+                </controls:DMTabItem>
+                <controls:DMTabItem Height="35" Header="ScrollViewer">
+                    <views:PageScrollViewer />
+                </controls:DMTabItem>
+                <controls:DMTabItem Height="35" Header="Virtualizing">
+                    <views:PageVirtualizing />
                 </controls:DMTabItem>
                 <controls:DMTabItem Height="35" Header="WPF转换器" />
                 <controls:DMTabItem
