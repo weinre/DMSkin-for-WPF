@@ -8,7 +8,8 @@
 
 [中文说明请点这里](./DMSkin.Docs/)
 
-<img src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/DMSkin.ScreenShot/demo.png" align="center">
+<img src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/DMSkin.ScreenShot/demo1.png" align="center">
+<img src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/DMSkin.ScreenShot/demo2.png" align="center">
 
 | Name                |   Describe    |
 | :----:              |   :----:      |
