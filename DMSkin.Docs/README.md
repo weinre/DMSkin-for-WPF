@@ -6,7 +6,8 @@
 
 #### 一个强大的WPF无边框窗体框架和控件库组合。
 
-<img src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/DMSkin.ScreenShot/demo.png" align="center">
+<img src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/DMSkin.ScreenShot/demo1.png" align="center">
+<img src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/DMSkin.ScreenShot/demo2.png" align="center">
 
 ## 前言 
 DMSkin-for-WPF (简称 DFW) 是一个强大的WPF无边框窗体框架和控件库组合。支持窗体阴影、窗体过渡动画，自带优雅的控件库，旨在帮助开发者更加高效、迅速地创建出优美的WPF界面。
