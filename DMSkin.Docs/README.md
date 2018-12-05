@@ -186,6 +186,8 @@ DMWindowShadowBackColor="#FF323CAD"   // 阴影背景色 (只对双层方案有�
 
 <img src="https://gitee.com/DreamMachine/Image/raw/master/Preview1.jpg" width="600" height="400" align="center">
 <img src="https://gitee.com/DreamMachine/Image/raw/master/Preview2.png" width="600" height="400" align="center">
+<img src="https://raw.githubusercontent.com/944095635/DMSkin-Wallpaper-Maker/master/Screenshot/DX1.png">
+<img src="https://raw.githubusercontent.com/944095635/DMSkin-Wallpaper-Maker/master/Screenshot/DX2.png">
 
 ## 联系
 欢迎加入我们：
