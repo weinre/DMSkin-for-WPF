@@ -46,13 +46,19 @@
                 <RowDefinition Height="50" />
                 <RowDefinition />
             </Grid.RowDefinitions>
-            <Grid Background="#2BB669">
-                <TextBlock
-                    Margin="15,0,0,0"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Center"
-                    FontSize="20"
-                    Text="DMSkin for WPF Demo 2.5.1.2" />
+            <Grid Background="{StaticResource ThemeColor}">
+                <WrapPanel HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <TextBlock
+                        Margin="5,0,0,0"
+                        FontSize="30"
+                        Text="D" />
+                    <Path
+                        Height="23"
+                        Data="{StaticResource DMSkin}"
+                        Fill="White"
+                        Stretch="Uniform" />
+                    <TextBlock FontSize="30" Text="Skin" />
+                </WrapPanel>
                 <WrapPanel
                     Height="{Binding DMSystemButtonSize}"
                     HorizontalAlignment="Right"
@@ -102,10 +108,22 @@
                 Style="{StaticResource DMTopTabControl}">
                 <controls:DMTabItem
                     Height="35"
-                    Header="基础组件"
-                    SelectedColor="#2BB669"
+                    SelectedColor="{StaticResource ThemeColor}"
                     SelectedForeground="White"
                     TabItemType="Left">
+                    <controls:DMTabItem.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <Path
+                                Height="25"
+                                Data="{StaticResource DMSkin}"
+                                Fill="{Binding Foreground, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=TabItem}}"
+                                Stretch="Uniform" />
+                            <TextBlock
+                                Margin="10,0,0,0"
+                                VerticalAlignment="Center"
+                                Text="基础组件" />
+                        </StackPanel>
+                    </controls:DMTabItem.Header>
                     <StackPanel Margin="10" Orientation="Horizontal">
                         <GroupBox Header="输入框">
                             <StackPanel>

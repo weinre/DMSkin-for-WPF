@@ -24,7 +24,7 @@
                             x:Name="grid"
                             Margin="0,0,0,6"
                             Padding="10,0,10,0"
-                            Background="{StaticResource MainColor}"
+                            Background="{StaticResource ThemeColor}"
                             CornerRadius="1">
                             <ContentPresenter Margin="6" />
                         </Border>
@@ -32,7 +32,7 @@
                             x:Name="ButtonPolygon"
                             HorizontalAlignment="Center"
                             VerticalAlignment="Bottom"
-                            Fill="{StaticResource MainColor}"
+                            Fill="{StaticResource ThemeColor}"
                             Points="0,0 12,0 6,6" />
                     </Grid>
                 </ControlTemplate>

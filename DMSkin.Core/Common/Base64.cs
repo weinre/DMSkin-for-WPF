@@ -10,7 +10,7 @@ namespace DMSkin.Core.Commom
         /// </summary>
         /// <param name="codeName">加密采用的编码方式</param>
         /// <param name="source">待加密的明文</param>
-        /// <returns></returns>
+        /// <returns>返回加密的文本</returns>
         public static string EncodeBase64(Encoding encode, string source)
         {
             byte[] bytes = encode.GetBytes(source);

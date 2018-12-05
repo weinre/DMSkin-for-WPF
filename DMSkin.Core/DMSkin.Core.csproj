@@ -67,6 +67,7 @@
     <Compile Include="Common\HTTP.cs" />
     <Compile Include="Common\UINT.cs" />
     <Compile Include="Converters\BoolToVisibilityConverter.cs" />
+    <Compile Include="Converters\CompareToVisibilityConverter.cs" />
     <Compile Include="Converters\EnumToVisibilityConverter.cs" />
     <Compile Include="Converters\EnumToBooleanConverter.cs" />
     <Compile Include="Converters\SecondToStringConverter.cs" />
