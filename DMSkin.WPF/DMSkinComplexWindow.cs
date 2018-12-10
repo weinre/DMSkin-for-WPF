@@ -14,7 +14,7 @@ using System.Windows.Threading;
 namespace DMSkin.WPF
 {
     /// <summary>
-    /// 双层双体
+    /// 双层双体 - 在Windows 7上面 系统按钮区域还存在一些BUG。
     /// </summary>
     public partial class DMSkinComplexWindow : Window
     {

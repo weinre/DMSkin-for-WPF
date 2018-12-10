@@ -13,7 +13,7 @@ using System.Windows.Media;
 namespace DMSkin.WPF
 {
     /// <summary>
-    /// 单层窗体
+    /// 单层窗体 - 嵌入GDI+组件的时候 会出现空域问题。请百度WPF空域问题。(Microsoft.DwayneNeed)
     /// </summary>
     public partial class DMSkinSimpleWindow:Window
     {
