@@ -46,16 +46,5 @@ namespace DMSkin.Core.WIN32
 
             return intPtr;
         }
-
-        public static void FullScreen(IntPtr targeHandler)
-        {
-            var hMonitor = NativeMethods.MonitorFromWindow(targeHandler, NativeConstants.MONITOR_DEFAULTTONEAREST);
-            MONITORINFO info = new MONITORINFO();
-            bool ok = NativeMethods.GetMonitorInfo(hMonitor, info);
-            if (!ok)
-                return;
-
-            ok = NativeMethods.SetWindowPos(targeHandler, IntPtr.Zero, info.rcMonitor.left, info.rcMonitor.top, info.rcMonitor.right, info.rcMonitor.bottom, 0);
-        }
     }
 }

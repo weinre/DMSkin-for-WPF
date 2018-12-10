@@ -136,120 +136,6 @@ namespace DMSkin.Core.WIN32
         HTHELP = 21,
     };
 
-    public enum GetWindow_Cmd : uint
-    {
-        GW_HWNDFIRST = 0,
-        GW_HWNDLAST = 1,
-        GW_HWNDNEXT = 2,
-        GW_HWNDPREV = 3,
-        GW_OWNER = 4,
-        GW_CHILD = 5,
-        GW_ENABLEDPOPUP = 6
-    }
-
-    public enum HitTestValues
-    {
-        HTERROR = -2,
-        HTTRANSPARENT = -1,
-        HTNOWHERE = 0,
-        HTCLIENT = 1,
-        HTCAPTION = 2,
-        HTSYSMENU = 3,
-        HTGROWBOX = 4,
-        HTMENU = 5,
-        HTHSCROLL = 6,
-        HTVSCROLL = 7,
-        HTMINBUTTON = 8,
-        HTMAXBUTTON = 9,
-        HTLEFT = 10,
-        HTRIGHT = 11,
-        HTTOP = 12,
-        HTTOPLEFT = 13,
-        HTTOPRIGHT = 14,
-        HTBOTTOM = 15,
-        HTBOTTOMLEFT = 16,
-        HTBOTTOMRIGHT = 17,
-        HTBORDER = 18,
-        HTOBJECT = 19,
-        HTCLOSE = 20,
-        HTHELP = 21
-    }
-
-    [Flags()]
-    public enum SetWindowPosFlags : uint
-    {
-        /// <summary>If the calling thread and the thread that owns the window are attached to different input queues,
-        /// the system posts the request to the thread that owns the window. This prevents the calling thread from
-        /// blocking its execution while other threads process the request.</summary>
-        /// <remarks>SWP_ASYNCWINDOWPOS</remarks>
-        AsynWindowPos = 0x4000,
-
-        /// <summary>Prevents generation of the WM_SYNCPAINT message.</summary>
-        /// <remarks>SWP_DEFERERASE</remarks>
-        DeferErase = 0x2000,
-
-        /// <summary>Draws a frame (defined in the window's class description) around the window.</summary>
-        /// <remarks>SWP_DRAWFRAME</remarks>
-        DrawFrame = 0x0020,
-
-        /// <summary>Applies new frame styles set using the SetWindowLong function. Sends a WM_NCCALCSIZE message to
-        /// the window, even if the window's size is not being changed. If this flag is not specified, WM_NCCALCSIZE
-        /// is sent only when the window's size is being changed.</summary>
-        /// <remarks>SWP_FRAMECHANGED</remarks>
-        FrameChanged = 0x0020,
-
-        /// <summary>Hides the window.</summary>
-        /// <remarks>SWP_HIDEWINDOW</remarks>
-        HideWindow = 0x0080,
-
-        /// <summary>Does not activate the window. If this flag is not set, the window is activated and moved to the
-        /// top of either the topmost or non-topmost group (depending on the setting of the hWndInsertAfter
-        /// parameter).</summary>
-        /// <remarks>SWP_NOACTIVATE</remarks>
-        NoActivate = 0x0010,
-
-        /// <summary>Discards the entire contents of the client area. If this flag is not specified, the valid
-        /// contents of the client area are saved and copied back into the client area after the window is sized or
-        /// repositioned.</summary>
-        /// <remarks>SWP_NOCOPYBITS</remarks>
-        NoCopyBits = 0x0100,
-
-        /// <summary>Retains the current position (ignores X and Y parameters).</summary>
-        /// <remarks>SWP_NOMOVE</remarks>
-        NoMove = 0x0002,
-
-        /// <summary>Does not change the owner window's position in the Z order.</summary>
-        /// <remarks>SWP_NOOWNERZORDER</remarks>
-        NoOwnerZOrder = 0x0200,
-
-        /// <summary>Does not redraw changes. If this flag is set, no repainting of any kind occurs. This applies to
-        /// the client area, the nonclient area (including the title bar and scroll bars), and any part of the parent
-        /// window uncovered as a result of the window being moved. When this flag is set, the application must
-        /// explicitly invalidate or redraw any parts of the window and parent window that need redrawing.</summary>
-        /// <remarks>SWP_NOREDRAW</remarks>
-        NoRedraw = 0x0008,
-
-        /// <summary>Same as the SWP_NOOWNERZORDER flag.</summary>
-        /// <remarks>SWP_NOREPOSITION</remarks>
-        NoReposition = 0x0200,
-
-        /// <summary>Prevents the window from receiving the WM_WINDOWPOSCHANGING message.</summary>
-        /// <remarks>SWP_NOSENDCHANGING</remarks>
-        NoSendChanging = 0x0400,
-
-        /// <summary>Retains the current size (ignores the cx and cy parameters).</summary>
-        /// <remarks>SWP_NOSIZE</remarks>
-        NoSize = 0x0001,
-
-        /// <summary>Retains the current Z order (ignores the hWndInsertAfter parameter).</summary>
-        /// <remarks>SWP_NOZORDER</remarks>
-        NoZOrder = 0x0004,
-
-        /// <summary>Displays the window.</summary>
-        /// <remarks>SWP_SHOWWINDOW</remarks>
-        ShowWindow = 0x0040
-    }
-
     public enum WindowMessages
     {
         WM_NULL = 0x0000,
@@ -416,22 +302,6 @@ namespace DMSkin.Core.WIN32
         public int top;
         public int right;
         public int bottom;
-
-        public RECT(int left, int top, int right, int bottom)
-        {
-            this.left = left;
-            this.top = top;
-            this.right = right;
-            this.bottom = bottom;
-        }
-
-        public static RECT FromXYWH(int x, int y, int width, int height)
-        {
-            return new RECT(x,
-                            y,
-                            x + width,
-                            y + height);
-        }
     }
 
     public struct POINTAPI
@@ -441,35 +311,10 @@ namespace DMSkin.Core.WIN32
     }
 
     [StructLayout(LayoutKind.Sequential)]
-    public struct WINDOWPOS
-    {
-        public IntPtr hwnd;
-        public IntPtr hWndInsertAfter;
-        public int x;
-        public int y;
-        public int cx;
-        public int cy;
-        public uint flags;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public struct POINTS
-    {
-        public short X;
-        public short Y;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
     public struct POINT
     {
         public int x;
         public int y;
-
-        public POINT(int x, int y)
-        {
-            this.x = x;
-            this.y = y;
-        }
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -493,48 +338,6 @@ namespace DMSkin.Core.WIN32
         public char[] szDevice;
     }
 
-    [StructLayout(LayoutKind.Sequential)]
-    public class MONITORINFO
-    {
-        public int cbSize = sizeof(int) * 10;
-        public RECT rcMonitor;
-        public RECT rcWork;
-        public int dwFlags;
-    }
-
-    [Flags]
-    public enum WindowStyle
-    {
-        WS_OVERLAPPED = 0x00000000,
-        WS_POPUP = -2147483648, //0x80000000,
-        WS_CHILD = 0x40000000,
-        WS_MINIMIZE = 0x20000000,
-        WS_VISIBLE = 0x10000000,
-        WS_DISABLED = 0x08000000,
-        WS_CLIPSIBLINGS = 0x04000000,
-        WS_CLIPCHILDREN = 0x02000000,
-        WS_MAXIMIZE = 0x01000000,
-        WS_CAPTION = 0x00C00000,
-        WS_BORDER = 0x00800000,
-        WS_DLGFRAME = 0x00400000,
-        WS_VSCROLL = 0x00200000,
-        WS_HSCROLL = 0x00100000,
-        WS_SYSMENU = 0x00080000,
-        WS_THICKFRAME = 0x00040000,
-        WS_GROUP = 0x00020000,
-        WS_TABSTOP = 0x00010000,
-        WS_MINIMIZEBOX = 0x00020000,
-        WS_MAXIMIZEBOX = 0x00010000,
-        WS_TILED = WS_OVERLAPPED,
-        WS_ICONIC = WS_MINIMIZE,
-        WS_SIZEBOX = WS_THICKFRAME,
-        WS_TILEDWINDOW = WS_OVERLAPPEDWINDOW,
-        WS_OVERLAPPEDWINDOW = (WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU |
-                                WS_THICKFRAME | WS_MINIMIZEBOX | WS_MAXIMIZEBOX),
-        WS_POPUPWINDOW = (WS_POPUP | WS_BORDER | WS_SYSMENU),
-        WS_CHILDWINDOW = (WS_CHILD)
-    }
-
     [Flags]
     public enum SendMessageTimeoutFlags : uint
     {
@@ -546,21 +349,10 @@ namespace DMSkin.Core.WIN32
     }
 
     [StructLayout(LayoutKind.Sequential)]
-    public struct NativeMessage
-    {
-        public IntPtr handle;
-        public uint msg;
-        public IntPtr wParam;
-        public IntPtr lParam;
-        public uint time;
-        public System.Windows.Point p;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
     public struct APPBARDATA
     {
         public int cbSize; // initialize this field using: Marshal.SizeOf(typeof(APPBARDATA));
-        public IntPtr hWnd;
+        private IntPtr hWnd;
         public uint uCallbackMessage;
         public uint uEdge;
         public RECT rc;
@@ -570,14 +362,13 @@ namespace DMSkin.Core.WIN32
     public static class NativeMethods
     {
         [DllImport("kernel32.dll", EntryPoint = "SetLastError")]
-        public static extern void SetLastError(int dwErrorCode);
+        private static extern void SetLastError(int dwErrorCode);
 
         [DllImport("user32.dll", EntryPoint = "SetWindowLong", SetLastError = true)]
-        private static extern Int32 IntSetWindowLong(IntPtr hWnd, int nIndex, Int32 dwNewLong);
+        private static extern Int32 IntSetWindowLong(IntPtr hWnd, int nIndex, int dwNewLong);
 
         [DllImport("user32.dll", EntryPoint = "SetWindowLongPtr", SetLastError = true)]
-        private static extern IntPtr IntSetWindowLongPtr(IntPtr hWnd, int nIndex, IntPtr dwNewLong);
-
+        internal static extern IntPtr SetWindowLongPtr(IntPtr hWnd, int nIndex, IntPtr dwNewLong);
 
         private static int IntPtrToInt32(IntPtr intPtr)
         {
@@ -601,7 +392,7 @@ namespace DMSkin.Core.WIN32
             else
             {
                 // use SetWindowLongPtr  
-                result = IntSetWindowLongPtr(hWnd, nIndex, dwNewLong);
+                result = SetWindowLongPtr(hWnd, nIndex, dwNewLong);
                 error = Marshal.GetLastWin32Error();
             }
 
@@ -613,18 +404,17 @@ namespace DMSkin.Core.WIN32
             return result;
         }
 
-
         [DllImport("user32.dll")]
         [return: MarshalAs(UnmanagedType.Bool)]
-        public static extern bool EnumWindows(EnumWindowsProc lpEnumFunc, IntPtr lParam);
+        internal static extern bool EnumWindows(EnumWindowsProc lpEnumFunc, IntPtr lParam);
 
         public delegate bool EnumWindowsProc(IntPtr hwnd, IntPtr lParam);
 
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
-        public static extern int ShowWindow(IntPtr hwnd, int nCmdShow);
+        internal static extern int ShowWindow(IntPtr hwnd, int nCmdShow);
 
         [DllImport("user32.dll", SetLastError = true)]
-        public static extern IntPtr SetParent(IntPtr hWndChild, IntPtr hWndNewParent);
+        internal static extern IntPtr SetParent(IntPtr hWndChild, IntPtr hWndNewParent);
 
         [DllImport("gdi32.dll")]
         public static extern IntPtr CreatePolygonRgn(ref POINTAPI lpPoint, int nCount, int nPolyFillMode);
@@ -633,68 +423,17 @@ namespace DMSkin.Core.WIN32
         public static extern IntPtr MonitorFromWindow(IntPtr hwnd, int dwFlags);
 
         [DllImport("user32.dll")]
-        internal static extern bool ReleaseCapture();
 
-        [DllImport("user32.dll")]
-        internal static extern IntPtr SetCapture(IntPtr hWnd);
-
-        [DllImport("user32.dll")]
-        public static extern IntPtr GetCapture();
-
-        [DllImport("user32.dll")]
-        [return: MarshalAs(UnmanagedType.Bool)]
-        internal static extern bool SetForegroundWindow(IntPtr hWnd);
-
-        [DllImport("user32.dll", SetLastError = true)]
-        internal static extern IntPtr SetActiveWindow(IntPtr hWnd);
-
-        [DllImport("user32.dll")]
-        public static extern int SendMessage(IntPtr hwnd, int msg, int wparam, int lparam);
+        public static extern int SendMessage(IntPtr hwnd, int msg, IntPtr wparam, IntPtr lparam);
 
         [DllImport("user32.dll", SetLastError = true, CharSet = CharSet.Auto)]
-        public static extern IntPtr SendMessageTimeout(IntPtr hWnd, uint Msg, UIntPtr wParam, IntPtr lParam, SendMessageTimeoutFlags fuFlags, uint uTimeout, out UIntPtr lpdwResult);
-
-        [DllImport("user32.dll")]
-        public static extern int PostMessage(IntPtr hwnd, int msg, int wparam, int lparam);
-
-        [DllImport("user32.dll")]
-        public static extern IntPtr GetSystemMenu(IntPtr hWnd, bool bRevert);
-
-        [DllImport("user32.dll")]
-        public static extern int TrackPopupMenuEx(IntPtr hmenu, uint fuFlags, int x, int y,
-           IntPtr hwnd, IntPtr lptpm);
-
-        [DllImport("user32.dll")]
-        public static extern int SendMessage(IntPtr hwnd, int wMsg, IntPtr wParam, IntPtr lParam);
-
-        [DllImport("user32.dll")]
-        public static extern int SendMessage(IntPtr hwnd, int msg, int wparam, POINTS pos);
+        internal static extern IntPtr SendMessageTimeout(IntPtr hWnd, uint Msg, UIntPtr wParam, IntPtr lParam, SendMessageTimeoutFlags fuFlags, uint uTimeout, out UIntPtr lpdwResult);
 
         [DllImport("user32.dll")]
         public static extern int PostMessage(IntPtr hwnd, int wMsg, IntPtr wParam, IntPtr lParam);
 
         [DllImport("user32.dll")]
-        public static extern int PostMessage(IntPtr hwnd, int msg, int wparam, POINTS pos);
-
-        [DllImport("user32.dll")]
         public static extern int SetWindowRgn(IntPtr hWnd, IntPtr hRgn, bool bRedraw);
-
-        [DllImport("user32.dll")]
-        public static extern bool SetWindowPos(IntPtr hWnd, IntPtr hWndInsertAfter, int X, int Y, int cx, int cy, SetWindowPosFlags uFlags);
-
-
-        [DllImport("user32.dll")]
-        [return: MarshalAs(UnmanagedType.Bool)]
-        public static extern bool IsWindowVisible(IntPtr hWnd);
-
-        [DllImport("gdi32.dll")]
-        public static extern IntPtr CreateRectRgn(int nLeftRect, int nTopRect, int nRightRect, int nBottomRect);
-
-        [DllImport("user32.dll")]
-        public static extern int GetWindowRgn(IntPtr hWnd, IntPtr hRgn);
-
-        [DllImport("gdi32.dll")]
-        public static extern int GetRgnBox(IntPtr hrgn, out RECT lprc);
 
         [DllImport("user32.dll")]
         public static extern Int32 GetWindowLong(IntPtr hWnd, Int32 Offset);
@@ -702,21 +441,17 @@ namespace DMSkin.Core.WIN32
         [DllImport("user32.dll")]
         public static extern int GetSystemMetrics(int smIndex);
 
-        [DllImport("user32.dll", SetLastError = true)]
+        [DllImport("user32.dll", SetLastError = true,CharSet = CharSet.Unicode)]
         public static extern IntPtr FindWindow(string lpClassName, string lpWindowName);
 
         [DllImport("user32.dll", SetLastError = true, CharSet = CharSet.Unicode)]
-        public static extern IntPtr FindWindowEx(IntPtr parentHandle, IntPtr childAfter, string className, IntPtr windowTitle);
+        internal static extern IntPtr FindWindowEx(IntPtr parentHandle, IntPtr childAfter, string className, IntPtr windowTitle);
 
         [DllImport("shell32.dll")]
         public static extern int SHAppBarMessage(uint dwMessage, [In] ref APPBARDATA pData);
 
         [DllImport("user32.dll")]
         public static extern bool GetMonitorInfo(HandleRef hmonitor, [In, Out] MONITORINFOEX monitorInfo);
-
-        [DllImport("user32.dll")]
-        public static extern bool GetMonitorInfo(IntPtr hmonitor, [In, Out] MONITORINFO monitorInfo);
-
     }
     public static class NativeConstants
     {

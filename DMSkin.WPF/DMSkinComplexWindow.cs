@@ -215,7 +215,7 @@ namespace DMSkin.WPF
                         wParam.ToInt32() == (int)HitTest.HTMINBUTTON ||
                         wParam.ToInt32() == (int)HitTest.HTHELP)
                     {
-                        NativeMethods.SendMessage(Handle, (int)WindowMessages.WM_NCPAINT, 0, 0);
+                        NativeMethods.SendMessage(Handle, (int)WindowMessages.WM_NCPAINT, IntPtr.Zero, IntPtr.Zero);
                         handled = true;
                     }
                     break;
@@ -426,7 +426,7 @@ namespace DMSkin.WPF
         {
             if (e.OriginalSource is Grid || e.OriginalSource is Window || e.OriginalSource is Border)
             {
-                NativeMethods.SendMessage(Handle, NativeConstants.WM_NCLBUTTONDOWN, (int)HitTest.HTCAPTION, 0);
+                NativeMethods.SendMessage(Handle, NativeConstants.WM_NCLBUTTONDOWN, (IntPtr)HitTest.HTCAPTION, IntPtr.Zero);
                 return;
             }
         }

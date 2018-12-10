@@ -237,7 +237,7 @@ namespace DMSkin.WPF
         {
             if (e.OriginalSource is Grid || e.OriginalSource is Window || e.OriginalSource is Border)
             {
-                NativeMethods.SendMessage(Handle,(int)WindowMessages.WM_NCLBUTTONDOWN, (int)HitTest.HTCAPTION, 0);
+                NativeMethods.SendMessage(Handle,(int)WindowMessages.WM_NCLBUTTONDOWN, (IntPtr)HitTest.HTCAPTION, IntPtr.Zero);
                 return;
             }
         }
