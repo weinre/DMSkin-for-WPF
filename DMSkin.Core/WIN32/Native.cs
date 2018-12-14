@@ -352,7 +352,7 @@ namespace DMSkin.Core.WIN32
     public struct APPBARDATA
     {
         public int cbSize; // initialize this field using: Marshal.SizeOf(typeof(APPBARDATA));
-        private IntPtr hWnd;
+        public IntPtr hWnd;
         public uint uCallbackMessage;
         public uint uEdge;
         public RECT rc;
